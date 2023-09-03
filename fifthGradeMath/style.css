@@ -8,3 +8,26 @@ input {
 li {
     font-size: 24px;
 }
+
+.fraction {
+    margin: 1%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+    font-size: 24px;
+}
+
+.fraction>span {
+    display: block;
+    padding: 0.1em;
+}
+
+.fraction span.fdn {
+    border-top: thin solid black;
+}
+
+.fraction span.bar {
+    display: none;
+}
