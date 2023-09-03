@@ -1,4 +1,5 @@
 const contentEl = document.getElementById('content');
+const checkBtn = document.getElementById('check-btn');
 
 const getElemFromArray = function (arr) {
     const value = arr[Math.floor(Math.random() * arr.length)];
@@ -20,15 +21,20 @@ const num222 = 2;
 const pool3 = [13, 14, 15, 16, 17, 18, 19, 20];
 const num3 = getElemFromArray(pool3);
 const num33 = getElemFromArray(pool3);
+const num333 = 3;
 
 
 const evenPool = [8,10,12,14,16,18];
 const evenNum = getElemFromArray(evenPool);
 
+const divisbleByThreePool = [6,9,12,15,18,21,24,27,36];
+const multipleOf3 = getElemFromArray(divisbleByThreePool);
+
+
 const instances = [
     {
-        instance: `${num1} × (${num3} − ${num2}) + ${num1} ÷ ${num11} = `,
-        answer: num1 * (num3 - num2) + num1 / num11
+        instance: `${num1} × (${num3} − ${num2}) + ${multipleOf3} ÷ ${num333} = `,
+        answer: num1 * (num3 - num2) + multipleOf3 / num333
     },
     {
         instance: `${num3} + ${num2} − ${num111} × ${num1} = `,
@@ -56,5 +62,22 @@ for (let index = 0; index <= 4; index++) {
     listEl.textContent = instances[index].instance;
     contentEl.appendChild(listEl);
     listEl.appendChild(inputEl);
+    const response = document.createElement('span');
+    response.setAttribute("id", `response-${index}`);
+    response.textContent = "";
+    listEl.appendChild(response);
 };
 
+checkBtn.addEventListener("click", () => {
+    for (let index = 0; index <= 4; index++) {
+        const inputElm = document.getElementById(`input-${index}`);
+        const responseElm = document.getElementById(`response-${index}`);
+        const studentAnswer = inputElm.value;
+        const TeacherAnswer = inputElm.getAttribute("data");
+        if (studentAnswer == TeacherAnswer) {
+            responseElm.textContent = "Correct";
+        } else {
+            responseElm.textContent = "Try Again!";
+        }
+    }
+});
