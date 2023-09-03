@@ -24,6 +24,11 @@ li {
     padding: 0.1em;
 }
 
+.fraction>input {
+    display: block;
+    padding: 0.5em;
+}
+
 .fraction span.fdn {
     border-top: thin solid black;
 }
