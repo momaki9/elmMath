@@ -23,6 +23,12 @@ const num3 = getElemFromArray(pool3);
 const num33 = getElemFromArray(pool3);
 const num333 = 3;
 
+const pool4 = [4,8,16,20,24,28,32];
+const num4 = getElemFromArray(pool4);
+const num44 = getElemFromArray(pool4);
+const num444 = 4
+const num4444 = getElemFromArray(pool4);
+
 
 const evenPool = [8,10,12,14,16,18];
 const evenNum = getElemFromArray(evenPool);
@@ -51,10 +57,18 @@ const instances = [
     {
         instance: `${evenNum} ÷ ${num222} + ${num2222} × ${num2} = `,
         answer: evenNum / num222 + num2222 * num2
+    },
+    {
+        instance: `${num4444} × (${num33} × ${num222} + ${num2} − ${num1})`,
+        answer: num4444*(num33*num222+num2-num1)
+    },
+    {
+        instance: `(${num4} ÷ ${num444}) × ${num22} − ${num111} + ${num44} × (${num44} − ${num11})`,
+        answer: (num4/num444)*num22-num111+num44*(num44-num11)
     }
 ];
 
-for (let index = 0; index <= 4; index++) {
+for (let index = 0; index <= 6; index++) {
     const listEl = document.createElement("li");
     const inputEl = document.createElement('input');
     inputEl.setAttribute("id", `input-${index}`);
@@ -69,7 +83,7 @@ for (let index = 0; index <= 4; index++) {
 };
 
 checkBtn.addEventListener("click", () => {
-    for (let index = 0; index <= 4; index++) {
+    for (let index = 0; index <= 6; index++) {
         const inputElm = document.getElementById(`input-${index}`);
         const responseElm = document.getElementById(`response-${index}`);
         const studentAnswer = inputElm.value;

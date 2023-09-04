@@ -1,7 +1,7 @@
 const contentElement = document.getElementById('fraction-content');
 const checkBtn = document.getElementById('submit-ans');
 
-checkBtn.addEventListener("click", ()=>{
+checkBtn.addEventListener("click", () => {
     for (let index = 1; index <= 10; index++) {
         const answerElem = document.getElementById(`hidden-${index}`);
         const responseElm = document.getElementById(`response-${index}`);
@@ -19,8 +19,10 @@ checkBtn.addEventListener("click", ()=>{
     }
 })
 
-const numerator = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-const denominator = [2, 3, 4, 5, 6, 7, 8, 9];
+const firstNumerator = [6, 7, 8, 9];
+const secondNumerator = [1, 2, 3, 4, 5, 6, 7];
+const firstDenom = [2, 3, 4, 5];
+const secondDenom = [6, 7, 8];
 const operation = ["+", "−"];
 
 const randomValuePicker = function (arr) {
@@ -29,10 +31,10 @@ const randomValuePicker = function (arr) {
 };
 
 for (let index = 1; index <= 10; index++) {
-    const numeratorValue1 = randomValuePicker(numerator);
-    const numeratorValue2 = randomValuePicker(numerator);
-    const denominatorValue1 = randomValuePicker(denominator);
-    const denominatorValue2 = randomValuePicker(denominator);
+    const numeratorValue1 = randomValuePicker(firstNumerator);
+    const numeratorValue2 = randomValuePicker(secondNumerator);
+    const denominatorValue1 = randomValuePicker(firstDenom);
+    const denominatorValue2 = randomValuePicker(secondDenom);
     const chosenOperation = randomValuePicker(operation);
 
     const answer1 = (numeratorValue1 / denominatorValue1) + (numeratorValue2 / denominatorValue2);
