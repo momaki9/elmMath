@@ -54,11 +54,6 @@ for (let index = 0; index <= 4; index++) {
     listEl.appendChild(response);
 };
 
-// const randomElem = function (array) {
-//     const chosenIndex = Math.floor(Math.random() * array.length);
-//     return array[chosenIndex];
-// };
-
 const type2Instances = [
     {
         numerator: [217, 203, 112, 182, 294, 259],

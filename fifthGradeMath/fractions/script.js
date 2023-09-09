@@ -5,19 +5,21 @@ checkBtn.addEventListener("click", () => {
     for (let index = 1; index <= 10; index++) {
         const answerElem = document.getElementById(`hidden-${index}`);
         const responseElm = document.getElementById(`response-${index}`);
-        const correctAns = answerElem.getAttribute("data");
+        let correctAns = answerElem.getAttribute("data");
+        correctAns = parseFloat(correctAns).toFixed(2);
         const studentNumerator = document.getElementById(`numerator-ans${index}`);
         const studentDenominator = document.getElementById(`denominator-ans${index}`);
-        const studentAnswer = studentNumerator.value / studentDenominator.value;
+        let studentAnswer = studentNumerator.value / studentDenominator.value;
+        studentAnswer = studentAnswer.toFixed(2)
         if (correctAns == studentAnswer) {
-            console.log("correct")
+            console.log(`correct Answer = ${correctAns} Student = ${studentAnswer}`)
             responseElm.textContent = "Correct";
         } else {
-            console.log("incorrect")
+            console.log(`incorrect. Answer = ${correctAns} Student = ${studentAnswer}`)
             responseElm.textContent = "Try Again!";
         }
     }
-})
+});
 
 const firstNumerator = [6, 7, 8, 9];
 const secondNumerator = [1, 2, 3, 4, 5, 6, 7];
@@ -39,7 +41,6 @@ for (let index = 1; index <= 10; index++) {
 
     const answer1 = (numeratorValue1 / denominatorValue1) + (numeratorValue2 / denominatorValue2);
     const answer2 = (numeratorValue1 / denominatorValue1) - (numeratorValue2 / denominatorValue2);
-    console.log(`Instance-${index} answer (addition) = ${answer1}; subtraction = ${answer2}`);
 
     const listItem = document.createElement('li');
 
