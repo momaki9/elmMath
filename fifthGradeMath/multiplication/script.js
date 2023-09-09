@@ -1,5 +1,5 @@
 const contentEl = document.getElementById('content');
-const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const numArray = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const checkBtn = document.getElementById('check-btn');
 
 checkBtn.addEventListener("click", () => {

@@ -56,20 +56,32 @@ for (let index = 0; index <= 4; index++) {
 
 const type2Instances = [
     {
+        numerator: [288, 328, 360, 408, 152, 184],
+        denom: 8
+    },
+    {
+        numerator: [150, 204, 486, 462, 354, 372],
+        denom: 6
+    },
+    {
         numerator: [217, 203, 112, 182, 294, 259],
         denom: 7
     },
     {
-        numerator: [288, 328, 360, 408, 152, 184],
+        numerator: [304, 320, 336, 352, 376, 416],
         denom: 8
     },
     {
         numerator: [549, 639, 162, 243, 342, 432],
         denom: 9
+    },
+    {
+        numerator: [231, 252, 266, 441, 497, 581],
+        denom: 7
     }
 ];
 
-for (let index = 0; index <= 2; index++) {
+for (let index = 0; index <= 5; index++) {
     const listEl = document.createElement('li');
     const chooseIndex = randomIndex(type2Instances[index].numerator);
     listEl.textContent = `${type2Instances[index].numerator[chooseIndex]} ÷ ${type2Instances[index].denom} =`;
