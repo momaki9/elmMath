@@ -55,3 +55,8 @@ button:hover {
     background-color: rgba(240, 89, 91, 0.6);
     cursor: pointer;
 }
+
+.response-elm {
+    margin-left: 3%;
+    font-size: large;
+}
