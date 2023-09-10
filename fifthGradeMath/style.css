@@ -1,3 +1,8 @@
+h1 {
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+}
 input {
     margin: 1%;
     padding: 1%;
@@ -47,6 +52,6 @@ button {
 }
 
 button:hover {
-    background-color: rgba(55, 5, 6 , 0.896);
+    background-color: rgba(240, 89, 91, 0.6);
     cursor: pointer;
 }
