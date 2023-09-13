@@ -60,3 +60,7 @@ button:hover {
     margin-left: 3%;
     font-size: large;
 }
+
+a>button {
+    margin-left: 50%;
+}
