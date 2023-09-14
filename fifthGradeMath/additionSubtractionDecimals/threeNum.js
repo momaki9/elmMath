@@ -80,7 +80,7 @@ for (let i = 0; i < 4; i++) {
     const secondValue = selectNum(numArray2);
     const thirdValue = selectNum(numArray3);
     let answer = parseFloat(firstValue) + parseFloat(secondValue)+ parseFloat(thirdValue);
-    answer = answer.toFixed(1);
+    answer = answer.toFixed(2);
     listEl2.textContent = `${firstValue} + ${secondValue} + ${thirdValue} =`;
     contentElm2.appendChild(listEl2);
     const inputEl2 = document.createElement("input");
@@ -100,7 +100,7 @@ for (let i = 4; i < 8; i++) {
     const secondValue = selectNum(numArray2);
     const thirdValue = selectNum(numArray3);
     let answer = parseFloat(firstValue) + parseFloat(secondValue) - parseFloat(thirdValue);
-    answer = answer.toFixed(1);
+    answer = answer.toFixed(2);
     listEl2.textContent = `${firstValue} + ${secondValue} − ${thirdValue} =`;
     contentElm2.appendChild(listEl2);
     const inputEl2 = document.createElement("input");
