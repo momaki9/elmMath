@@ -9,7 +9,7 @@ const decimalGenerator = function (num, dec) {
 }
 
 const decArray = [1, 2, 3, 4];
-const numArray = [5, 5, 5, 5, 4, 5, 5,5];
+const numArray = [5, 5, 5, 5, 4, 5, 5, 5];
 //choses a random number from array
 const randomNumber = function (array) {
     const randomIndex = Math.floor(Math.random() * array.length);
@@ -25,12 +25,14 @@ for (let index = 0; index < 10; index++) {
     const num1 = decimalGenerator(randomValue1, randomDec1);
     const num2 = decimalGenerator(randomValue2, randomDec2);
     let dataAttribute = "";
+    if (num1 < num2) {
+        dataAttribute = "<";
+    };
+    if (num1 > num2) {
+        dataAttribute = ">";
+    }
     if (num1 == num2) {
-        dataAttribute = "="
-    } else if (num1 > num2) {
-        dataAttribute = ">"
-    } else {
-        dataAttribute = "<"
+        dataAttribute = "=";
     };
     const listEl = document.createElement("li");
     listEl.setAttribute("id", `inst${index}`);
