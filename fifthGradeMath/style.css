@@ -4,9 +4,9 @@ h1 {
     text-align: center;
 }
 input {
-    margin: 1%;
-    padding: 1%;
-    width: 4%;
+    margin: 1.5%;
+    padding: 1.5%;
+    width: 5%;
     border: 1px grey round;
 }
 
@@ -56,11 +56,16 @@ button:hover {
     cursor: pointer;
 }
 
-.response-elm {
+.response-elm, .span-PA {
     margin-left: 3%;
     font-size: large;
 }
 
 a>button {
     margin-left: 50%;
+}
+
+.perimeter-and-area {
+    padding: 1%;
+    margin: 1%;
 }
