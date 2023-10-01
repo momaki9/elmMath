@@ -3,7 +3,7 @@ const contentElement = document.getElementById("conteny-express");
 const instanceObj = [
     {
         exp: "double 9, multiply 5 and 3, and then subtract the second number from the first number",
-        ans: "(2 × 9) - (3 × 5)"
+        ans: "(2 × 9) − (3 × 5)"
     },
     {
         exp: "triple 6, multiply 2 and 4, and then add them",
@@ -15,11 +15,11 @@ const instanceObj = [
     },
     {
         exp: "triple 5 and then subtract 4 times 2",
-        ans: "(3 × 5) - (4 × 2)"
+        ans: "(3 × 5) − (4 × 2)"
     },
     {
         exp: "triple 6 and then subtract 3 times 4",
-        ans: "(3 × 6) - (3 × 4)"
+        ans: "(3 × 6) − (3 × 4)"
     },
     {
         exp: "quadruple 8 and then add 9 times 7",
@@ -27,7 +27,7 @@ const instanceObj = [
     },
     {
         exp: "triple 7 and then subtract 2 times 4",
-        ans: "(3 × 7) - (2 × 4)"
+        ans: "(3 × 7) − (2 × 4)"
     },
     {
         exp: "multiply 3 and 6, and then add 8 times 2",
@@ -35,11 +35,15 @@ const instanceObj = [
     },
     {
         exp: "quadruple 7, multiply 2 and 9, and then subtract the second number from the first number",
-        ans: "(4 × 7) - (2 × 9)"
+        ans: "(4 × 7) − (2 × 9)"
     },
     {
         exp: "triple 4, multiply 11 and 7, and then add the second number from the first number",
         ans: "(3 × 4) + (11 × 7)"
+    },
+    {
+        exp: "subtract 10 divided into fourths from 18 divided into thirds",
+        ans: "(18 ÷ 3) − (10 ÷ 4)"
     }
 ];
 
