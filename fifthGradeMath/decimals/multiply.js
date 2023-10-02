@@ -49,9 +49,9 @@ for (let index = 0; index < 5; index++) {
 };
 
 checkBtn1.addEventListener("click", () => {
-    for (let index = 0; index < 10; index++) {
-        const inputElm = document.getElementById(`input-${index}`);
-        const responseElm = document.getElementById(`response-${index}`);
+    for (let index = 0; index < 5; index++) {
+        const inputElm = document.getElementById(`input1-${index}`);
+        const responseElm = document.getElementById(`response1-${index}`);
         let studentAnswer = inputElm.value;
         studentAnswer = Number(studentAnswer).toFixed(2);
         let teacherAnswer = inputElm.getAttribute("data");
@@ -86,9 +86,9 @@ for (let index = 0; index < 5; index++) {
 };
 
 checkBtn2.addEventListener("click", () => {
-    for (let index = 0; index < 10; index++) {
-        const inputElm = document.getElementById(`input-${index}`);
-        const responseElm = document.getElementById(`response-${index}`);
+    for (let index = 0; index < 5; index++) {
+        const inputElm = document.getElementById(`input2-${index}`);
+        const responseElm = document.getElementById(`response2-${index}`);
         let studentAnswer = inputElm.value;
         studentAnswer = Number(studentAnswer).toFixed(2);
         let teacherAnswer = inputElm.getAttribute("data");
@@ -110,7 +110,7 @@ for (let index = 0; index < 5; index++) {
     const num2 = selectNum(decimalNumArray3);
     const ans = num1 * num2;
     const inputEl = document.createElement('input');
-    inputEl.setAttribute("id", `input2-${index}`);
+    inputEl.setAttribute("id", `input3-${index}`);
     inputEl.setAttribute("data", ans)
     const listEl = document.createElement('li');
     listEl.setAttribute("id", `list2-${index}`);
@@ -118,15 +118,15 @@ for (let index = 0; index < 5; index++) {
     contentEl3.appendChild(listEl);
     listEl.appendChild(inputEl);
     const response = document.createElement('span');
-    response.setAttribute("id", `response2-${index}`);
+    response.setAttribute("id", `response3-${index}`);
     response.textContent = "";
     listEl.appendChild(response);
 };
 
 checkBtn3.addEventListener("click", () => {
-    for (let index = 0; index < 10; index++) {
-        const inputElm = document.getElementById(`input-${index}`);
-        const responseElm = document.getElementById(`response-${index}`);
+    for (let index = 0; index < 5; index++) {
+        const inputElm = document.getElementById(`input3-${index}`);
+        const responseElm = document.getElementById(`response3-${index}`);
         let studentAnswer = inputElm.value;
         studentAnswer = Number(studentAnswer).toFixed(2);
         let teacherAnswer = inputElm.getAttribute("data");
@@ -148,7 +148,7 @@ for (let index = 0; index < 5; index++) {
     const num2 = selectNum(decimalNumArray4);
     const ans = num1 * num2;
     const inputEl = document.createElement('input');
-    inputEl.setAttribute("id", `input2-${index}`);
+    inputEl.setAttribute("id", `input4-${index}`);
     inputEl.setAttribute("data", ans)
     const listEl = document.createElement('li');
     listEl.setAttribute("id", `list2-${index}`);
@@ -156,15 +156,15 @@ for (let index = 0; index < 5; index++) {
     contentEl4.appendChild(listEl);
     listEl.appendChild(inputEl);
     const response = document.createElement('span');
-    response.setAttribute("id", `response2-${index}`);
+    response.setAttribute("id", `response4-${index}`);
     response.textContent = "";
     listEl.appendChild(response);
 };
 
 checkBtn4.addEventListener("click", () => {
-    for (let index = 0; index < 10; index++) {
-        const inputElm = document.getElementById(`input-${index}`);
-        const responseElm = document.getElementById(`response-${index}`);
+    for (let index = 0; index < 5; index++) {
+        const inputElm = document.getElementById(`input4-${index}`);
+        const responseElm = document.getElementById(`response4-${index}`);
         let studentAnswer = inputElm.value;
         studentAnswer = Number(studentAnswer).toFixed(2);
         let teacherAnswer = inputElm.getAttribute("data");
