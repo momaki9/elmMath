@@ -168,3 +168,11 @@ document.getElementById("check-ans").addEventListener("click", function () {
         }
     }
 });
+
+
+// const decimalInstances = [
+//     {
+//         statement: "",
+//         answer:
+//     }
+// ]

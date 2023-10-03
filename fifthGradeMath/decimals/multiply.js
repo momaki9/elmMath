@@ -36,7 +36,7 @@ for (let index = 0; index < 5; index++) {
     const ans = num1 * num2;
     const inputEl = document.createElement('input');
     inputEl.setAttribute("id", `input1-${index}`);
-    inputEl.setAttribute("data", ans)
+    inputEl.setAttribute("data", ans.toFixed(4))
     const listEl = document.createElement('li');
     listEl.setAttribute("id", `list1-${index}`);
     listEl.textContent = `${num2} × ${num1} = `;
@@ -73,7 +73,7 @@ for (let index = 0; index < 5; index++) {
     const ans = num1 * num2;
     const inputEl = document.createElement('input');
     inputEl.setAttribute("id", `input2-${index}`);
-    inputEl.setAttribute("data", ans)
+    inputEl.setAttribute("data", ans.toFixed(4))
     const listEl = document.createElement('li');
     listEl.setAttribute("id", `list2-${index}`);
     listEl.textContent = `${num2} × ${num1} = `;
@@ -111,7 +111,7 @@ for (let index = 0; index < 5; index++) {
     const ans = num1 * num2;
     const inputEl = document.createElement('input');
     inputEl.setAttribute("id", `input3-${index}`);
-    inputEl.setAttribute("data", ans)
+    inputEl.setAttribute("data", ans.toFixed(4))
     const listEl = document.createElement('li');
     listEl.setAttribute("id", `list2-${index}`);
     listEl.textContent = `${num2} × ${num1} = `;
@@ -149,7 +149,7 @@ for (let index = 0; index < 5; index++) {
     const ans = num1 * num2;
     const inputEl = document.createElement('input');
     inputEl.setAttribute("id", `input4-${index}`);
-    inputEl.setAttribute("data", ans)
+    inputEl.setAttribute("data", ans.toFixed(4))
     const listEl = document.createElement('li');
     listEl.setAttribute("id", `list2-${index}`);
     listEl.textContent = `${num2} × ${num1} = `;
