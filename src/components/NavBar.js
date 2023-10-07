@@ -9,15 +9,24 @@ const NavBar = function(){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="test" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown title="Topics" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Addition/Subtraction</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Multiplication/Division
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Decimals</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">
+                Word Problems
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Quizzes/Test" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Quiz#1</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Quiz#2
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Test#1
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
