@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import Home from "./homePage/Home";
-import Test from "./fifthGradeMath/Test";
+import AdditionSubtraction from "./pages/AdditionSubtraction";
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -14,11 +14,14 @@ function App() {
           element={<Home />}
         />
         <Route
-          path="/test"
-          element={<Test />}
+          path="/elmMath/AddSub"
+          element={<AdditionSubtraction />}
+        />
+        <Route
+          path="/elmMath/"
+          element={""}
         />
       </Routes>
-      <Footer />
     </Router>
   );
 }

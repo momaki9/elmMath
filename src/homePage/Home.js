@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
 import Alert from 'react-bootstrap/Alert';
 import Topics from '../components/Topics';
+import Footer from '../components/Footer';
 
 function Home() {
     return (
@@ -20,6 +21,7 @@ function Home() {
                 </p>
             </Alert>
             <Topics />
+            <Footer />
         </>
         // <>
 

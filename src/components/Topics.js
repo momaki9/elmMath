@@ -17,7 +17,7 @@ const Topics = function () {
                             <Badge bg="secondary" pill>
                                 Addition/Subtraction
                             </Badge>
-                            <a href='#'>Go there</a>
+                            <a href='elmMath/AddSub'>Go there</a>
                         </ListGroup.Item>
                     </Col>
                 </Row>
