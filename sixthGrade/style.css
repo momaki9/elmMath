@@ -5,8 +5,39 @@ ol, ul {
 
 li {
     margin: 2%;
+    font-size: 24px;
 }
 
 h1 {
     text-align: center;
+}
+
+input {
+    margin: 1.5%;
+    padding: 1.5%;
+    width: 5%;
+    border: 1px grey round;
+}
+
+
+button {
+    height: max-content;
+    font-weight: bolder;
+    padding: 1%;
+    margin: 1%;
+    background-color: lavender;
+}
+
+button:hover {
+    background-color: rgba(240, 89, 91, 0.6);
+    cursor: pointer;
+}
+
+.response-elm, .span-PA {
+    margin-left: 3%;
+    font-size: large;
+}
+
+a>button {
+    margin-left: 50%;
 }
