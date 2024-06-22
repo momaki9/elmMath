@@ -39,6 +39,7 @@ for (let i = 0; i < 5; i++) {
     const firstValue = selectNum(pool1);
     const secondValue = selectNum(pool2)
     let answer = parseFloat(firstValue) + parseFloat(secondValue);
+    answer = answer.toFixed(4);
     listEl.textContent = `${firstValue} + ${secondValue} =`;
     contentElm.appendChild(listEl);
     const inputEl = document.createElement("input");
@@ -60,11 +61,12 @@ for (let i = 0; i < 5; i++) {
     const firstValue = selectNum(pool1);
     const secondValue = selectNum(pool2)
     let answer = parseFloat(firstValue) - parseFloat(secondValue);
+    answer = answer.toFixed(4);
     listEl.textContent = `${firstValue} − ${secondValue} =`;
     contentElm.appendChild(listEl);
     const inputEl = document.createElement("input");
     inputEl.setAttribute("data", answer);
-    inputEl.setAttribute("id", `add-${i}`);
+    inputEl.setAttribute("id", `sub-${i}`);
     listEl.appendChild(inputEl);
     const responseEl = document.createElement("span");
     listEl.appendChild(responseEl);
@@ -79,11 +81,12 @@ for (let i = 0; i < 5; i++) {
     const firstValue = selectNum(pool);
     const secondValue = selectNum(pool)
     let answer = parseFloat(firstValue) * parseFloat(secondValue);
+    answer = answer.toFixed(4);
     listEl.textContent = `${firstValue} × ${secondValue} =`;
     contentElm.appendChild(listEl);
     const inputEl = document.createElement("input");
     inputEl.setAttribute("data", answer);
-    inputEl.setAttribute("id", `add-${i}`);
+    inputEl.setAttribute("id", `mult-${i}`);
     listEl.appendChild(inputEl);
     const responseEl = document.createElement("span");
     listEl.appendChild(responseEl);
@@ -94,7 +97,7 @@ checkBtn.addEventListener("click", function(){
     const allInputElms = document.querySelectorAll("input");
     const allResponseElems = document.querySelectorAll("span");
     for (let index = 0; index < allInputElms.length; index++) {
-        const studentAnswer = allInputElms[index].value;
+        const studentAnswer = Number(allInputElms[index].value).toFixed(4);
         const teacherAnswer = allInputElms[index].getAttribute("data");
         if (studentAnswer == teacherAnswer) {
             allResponseElems[index].textContent = "Nice Job!"
