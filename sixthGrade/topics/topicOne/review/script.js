@@ -42,7 +42,7 @@ for (var i = 0; i < contentArr.length; i++) {
     for (var j = 0; j < 3; j++) {
         const elm = document.createElement("li");
         elm.setAttribute("id", `${contentArrStri[i]}-${j}`)
-        elm.textContent = `${contentArrStri[i]}-${j}`;
+        // elm.textContent = `${contentArrStri[i]}-${j}`;
         contentArr[i].appendChild(elm)
     }
 }
@@ -184,6 +184,8 @@ for (var i = 0; i < 3; i++) {
 }
 
 const mixedNumElm = document.getElementById("mixedNum");
+const fixedTwoDigitArr = generateNumArr(12,98,2,0);
+const fixedOneDigitArr = generateNumArr(3,13,2,0);
 
 for (var i = 0; i < 3; i++) {
     const elm = document.createElement("li");
@@ -192,7 +194,7 @@ for (var i = 0; i < 3; i++) {
     divElm.setAttribute("class", "fraction");
     const numeratorSpan = document.createElement("span");
     numeratorSpan.setAttribute("class", "fup");
-    const num1 = selectNum(twoDigitArr)
+    const num1 = selectNum(fixedTwoDigitArr)
     numeratorSpan.textContent = num1;
     divElm.appendChild(numeratorSpan);
 
@@ -202,7 +204,7 @@ for (var i = 0; i < 3; i++) {
 
     const denominatorSpan = document.createElement("span");
     denominatorSpan.setAttribute("class", "fdn");
-    const num2 = selectNum(oneDigitArr)
+    const num2 = selectNum(fixedOneDigitArr)
     denominatorSpan.textContent = num2;
     divElm.appendChild(denominatorSpan);
 
@@ -272,11 +274,13 @@ checkBtn.addEventListener("click", function () {
     const allResponseElems = document.querySelectorAll(".my-response");
     for (let index = 0; index < allInputElms.length; index++) {
         const studentAnswer = Number(allInputElms[index].value).toFixed(4);
-        const teacherAnswer = allInputElms[index].getAttribute("data");
+        let teacherAnswer = Number(allInputElms[index].getAttribute("data"));
+        teacherAnswer = teacherAnswer.toFixed(4);
+        console.log(`teacherAnswer = ${teacherAnswer}`)
         if (studentAnswer == teacherAnswer) {
-            allResponseElems[index].textContent = "Nice Job!"
+            allResponseElems[index].textContent = "Nice Job!";
         } else {
-            allResponseElems[index].textContent = "Try again!"
+            allResponseElems[index].textContent = "Try again!";
         };
     };
 });
