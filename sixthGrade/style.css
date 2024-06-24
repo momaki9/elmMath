@@ -41,3 +41,47 @@ button:hover {
 a>button {
     margin-left: 50%;
 }
+
+h3 {
+    margin-left: 2%;
+}
+
+
+.fraction {
+    margin: 1%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+    font-size: 24px;
+}
+
+.fraction>span {
+    display: block;
+    padding: 0.1em;
+}
+
+.fraction>input {
+    display: block;
+    padding: 0.4em;
+    width: 2.5em;
+}
+
+.fraction span.fdn {
+    border-top: thin solid black;
+}
+
+.fraction span.bar {
+    display: none;
+}
+
+.num {
+    margin-right: -2px;
+}
+
+.num-entry {
+    width: 8px;
+    height: 4px;
+    margin-right: -4px;
+}
