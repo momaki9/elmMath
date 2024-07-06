@@ -184,8 +184,8 @@ for (var i = 0; i < 3; i++) {
 }
 
 const mixedNumElm = document.getElementById("mixedNum");
-const fixedTwoDigitArr = generateNumArr(12,98,2,0);
-const fixedOneDigitArr = generateNumArr(3,13,2,0);
+const fixedTwoDigitArr = generateNumArr(12, 98, 2, 0);
+const fixedOneDigitArr = generateNumArr(3, 13, 2, 0);
 
 for (var i = 0; i < 3; i++) {
     const elm = document.createElement("li");
@@ -273,9 +273,9 @@ checkBtn.addEventListener("click", function () {
     const allInputElms = document.querySelectorAll(".my-answer");
     const allResponseElems = document.querySelectorAll(".my-response");
     for (let index = 0; index < allInputElms.length; index++) {
-        const studentAnswer = Number(allInputElms[index].value).toFixed(4);
+        const studentAnswer = Number(allInputElms[index].value).toFixed(1);
         let teacherAnswer = Number(allInputElms[index].getAttribute("data"));
-        teacherAnswer = teacherAnswer.toFixed(4);
+        teacherAnswer = teacherAnswer.toFixed(1);
         console.log(`teacherAnswer = ${teacherAnswer}`)
         if (studentAnswer == teacherAnswer) {
             allResponseElems[index].textContent = "Nice Job!";
@@ -284,3 +284,33 @@ checkBtn.addEventListener("click", function () {
         };
     };
 });
+
+
+const testNums = generateNumArr(81.1, 99.1, 0.2, 1);
+const testNums2 = generateNumArr(21, 89, 1, 0);
+
+function generateNiceNums(arr1, arr2) {
+    let arr = [];
+    let numPair = {};
+    let result;
+    for (var i = 0; i < arr1.length; i++) {
+        let currentNum = arr1[i];
+        for (var j = 0; j<arr2.length; j++) {
+            let subNum = arr2[j];
+            if (subNum % 10 != 0) {
+            result = currentNum * subNum;
+            if (result % 1 === 0) {
+            numPair = { result: result, subNum: subNum, currentNum: currentNum}
+            arr.push(numPair);
+            }
+        }
+            // if (result % subNum === 0) {
+            //     numPair = { result: result, subNum: subNum, currentNum: currentNum}
+            //     arr.push(numPair);
+            // }
+        }
+    }
+    return arr;
+}
+
+// console.log(generateNiceNums(testNums,testNums2))
