@@ -81,7 +81,8 @@ h3 {
 }
 
 .num-entry {
-    width: 8px;
+    width: 28px;
     height: 4px;
     margin-right: -4px;
+    padding: 14px;
 }
